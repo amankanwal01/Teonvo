@@ -1,0 +1,65 @@
+.brands-container {
+  overflow: hidden;
+  padding: 80px 0;
+  background-color: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+/* Gradient faders on the left and right to make logos fade in/out */
+.brands-container::before,
+.brands-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+}
+
+.brands-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a, transparent);
+}
+
+.brands-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a, transparent);
+}
+
+.brands-track {
+  display: flex;
+  width: calc(200px * 15); /* Adjust based on logo count x width */
+  animation: scroll 30s linear infinite;
+}
+
+.brand-item {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.brand-logo {
+  height: 35px; /* Keeps all logos consistent in height */
+  width: auto;
+  filter: grayscale(1) brightness(0.5); /* Makes them look muted/pro */
+  transition: filter 0.3s ease;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0) brightness(1); /* Original color/bright on hover */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-200px * 5)
+    ); /* Moves by the width of the original set */
+  }
+}
