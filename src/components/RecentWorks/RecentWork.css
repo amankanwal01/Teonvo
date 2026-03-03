@@ -1,0 +1,9 @@
+.recent-work {
+  padding: 50px;
+  gap: 20px;
+  display: flex;
+  height: 550px;
+}
+.recent-work .item {
+  width: 25%;
+}

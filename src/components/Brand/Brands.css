@@ -1,9 +1,11 @@
 .brands-container {
+  z-index: 100;
   overflow: hidden;
-  padding: 80px 0;
-  background-color: #0a0a0a;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 0;
+  background: none;
+  margin: 110px;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); */
   position: relative;
 }
 
@@ -20,7 +22,7 @@
 
 .brands-container::before {
   left: 0;
-  background: linear-gradient(to right, #0a0a0a, transparent);
+  /* background: linear-gradient(to right, #0a0a0a, transparent); */
 }
 
 .brands-container::after {
@@ -31,22 +33,22 @@
 .brands-track {
   display: flex;
   width: calc(200px * 15); /* Adjust based on logo count x width */
-  animation: scroll 30s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
 .brand-item {
   width: 200px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 40px;
 }
-
 .brand-logo {
   height: 35px; /* Keeps all logos consistent in height */
   width: auto;
   filter: grayscale(1) brightness(0.5); /* Makes them look muted/pro */
-  transition: filter 0.3s ease;
+  transition: filter 0.3ss ease;
 }
 
 .brand-logo:hover {
