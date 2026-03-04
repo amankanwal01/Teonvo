@@ -1,0 +1,129 @@
+.design-container {
+  display: flex;
+  /* Makes both sides (image + content) equal height */
+  /* align-items: stretch; */
+
+  /* Space between image and content */
+  gap: 60px;
+
+  /* Proper breathing space (industry spacing system) */
+  padding: 80px;
+}
+
+/* ========================================
+   LEFT SIDE - IMAGE CONTAINER
+======================================== */
+
+.design-img-container {
+  /* Equal width distribution */
+  flex: 1;
+
+  /* Clean rounded look */
+  border-radius: 20px;
+
+  /* Prevent image overflow */
+  overflow: hidden;
+}
+
+.design-img-container img {
+  /* Fill entire container */
+  width: 100%;
+  height: 100%;
+
+  /* Prevent distortion */
+  object-fit: cover;
+
+  /* Remove inline image spacing */
+  /* display: block; */
+}
+
+/* ========================================
+   RIGHT SIDE - CONTENT AREA
+======================================== */
+
+.design-card-container {
+  /* Equal width */
+  flex: 1;
+
+  /* Vertical stacking */
+  display: flex;
+  flex-direction: column;
+
+  /* Clean spacing between cards */
+  gap: 30px;
+}
+
+/* ========================================
+   HERO / HEADER AREA
+======================================== */
+
+.design-hero {
+  padding-bottom: 30px;
+
+  /* Soft separator */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.design-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.design-hero p {
+  font-size: 1.2rem;
+  color: #9a9a9a;
+  margin-bottom: 20px;
+}
+
+.design-hero div {
+  display: flex;
+  gap: 15px;
+}
+
+/* ========================================
+   CARD COMPONENT
+======================================== */
+
+.design-card {
+  padding: 30px;
+  border-radius: 20px;
+
+  /* Modern glass background */
+  background: rgba(255, 255, 255, 0.05);
+
+  /* Soft animation */
+  transition: 0.3s ease;
+}
+
+.design-card:hover {
+  transform: translateY(-6px);
+}
+
+.design-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.design-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.design-card-description {
+  color: #bbbbbb;
+  line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 992px) {
+  .design-container {
+    flex-direction: column;
+  }
+
+  .design-img-container {
+    height: 400px;
+  }
+}
